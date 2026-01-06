@@ -295,7 +295,7 @@ def process_doi(entry: Entry) -> str:
         Markdown link with DOI as display text and DOI URL as target.
     """
     if isinstance(entry, PublicationEntry) and entry.doi:
-        return f"[{entry.doi}]({entry.doi_url})"
+        return f"{entry.doi_url}"
     raise RenderCVInternalError("DOI is not provided for this entry.")
 
 
